@@ -687,6 +687,60 @@ button { font: inherit; }
   color: var(--ink-soft);
 }
 
+.contact-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 32px;
+  padding: 28px;
+}
+
+.contact-hero h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  margin: 0;
+}
+
+.contact-hero-phones {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-phone-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.contact-phone-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.contact-phone-num {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  transition: color 140ms ease;
+}
+
+.contact-phone-num:hover { color: var(--forest); }
+
+@media (max-width: 680px) {
+  .contact-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .contact-phone-row { align-items: flex-start; }
+}
+
 .footer-note {
   margin-top: 26px;
   color: var(--ink-soft);

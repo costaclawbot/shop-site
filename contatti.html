@@ -27,9 +27,8 @@
             <a class="nav-link" href="./prodotti.html" data-i18n="navProducts">Prodotti</a>
             <a class="nav-link" href="./officina.html" data-i18n="navWorkshop">Officina</a>
             <a class="nav-link" href="./marchi.html" data-i18n="navBrands">Marchi</a>
-            <a class="nav-link is-active" href="./contatti.html" data-i18n="navContacts" data-i18n="contactsEyebrow">Contatti</a>
+            <a class="nav-link is-active" href="./contatti.html" data-i18n="navContacts">Contatti</a>
           </nav>
-
           <div class="topbar-actions">
             <div class="lang-switch" aria-label="Language switcher">
               <button class="lang-btn is-active" data-lang="it">IT</button>
@@ -42,13 +41,14 @@
             </button>
           </div>
         </header>
+
         <div class="mobile-menu" id="mobile-menu" hidden>
           <nav class="mobile-menu-panel" aria-label="Mobile navigation">
             <a class="nav-link" href="./index.html" data-i18n="navHome">Home</a>
             <a class="nav-link" href="./prodotti.html" data-i18n="navProducts">Prodotti</a>
             <a class="nav-link" href="./officina.html" data-i18n="navWorkshop">Officina</a>
             <a class="nav-link" href="./marchi.html" data-i18n="navBrands">Marchi</a>
-            <a class="nav-link is-active" href="./contatti.html" data-i18n="navContacts" data-i18n="contactsEyebrow">Contatti</a>
+            <a class="nav-link is-active" href="./contatti.html" data-i18n="navContacts">Contatti</a>
             <div class="mobile-menu-meta">
               <a class="btn btn-dark" href="tel:+393336689364" data-i18n="call">Chiama</a>
               <div class="lang-switch mobile-lang-switch" aria-label="Language switcher">
@@ -63,35 +63,27 @@
           <div class="page-header compact-header">
             <p class="eyebrow" data-i18n="contactsEyebrow">Contatti</p>
             <h2 data-i18n="contactsTitle">Trova subito il negozio.</h2>
-            <p data-i18n="contactsIntro">Telefono, WhatsApp, email, indirizzo e orari in una pagina semplice e diretta.</p>
-            <p class="contacts-fast-cta" data-i18n="contactsFastCta">Per una richiesta veloce, conviene chiamare o scrivere su WhatsApp: è il modo più rapido per avere una risposta.</p>
+            <p data-i18n="contactsIntro">Telefono, email, indirizzo e orari in una pagina diretta.</p>
           </div>
 
-          <section class="section-spacer contact-band card lined-card contact-band-page">
-            <div>
+          <section class="section-spacer contact-hero card lined-card">
+            <div class="contact-hero-lead">
               <span class="mini-label" data-i18n="phoneLabel">Telefono</span>
-              <h3 data-i18n="contactsBoxTitle">Contatti</h3>
-              <p data-i18n="contactsBandLead">Per informazioni, ricambi o assistenza, il modo più veloce è chiamare o scrivere direttamente.</p>
+              <h3 data-i18n="contactsBandLead">Chiama per informazioni, ricambi o assistenza.</h3>
             </div>
-            <div class="contact-band-actions">
-              <a class="btn btn-dark" href="tel:+393336689364">+39 333 668 9364</a>
-              <a class="btn btn-light" href="tel:+390973823286">+39 0973 823286</a>
-              <a class="btn btn-light" href="https://wa.me/393336689364" target="_blank" rel="noreferrer">WhatsApp</a>
-              <a class="btn btn-light" href="https://maps.google.com/?q=Via+Rocco+Scotellaro+161,+85044+Lauria+PZ,+Italia" target="_blank" rel="noreferrer" data-i18n="openMap">Apri la mappa</a>
+            <div class="contact-hero-phones">
+              <div class="contact-phone-row">
+                <span class="contact-phone-label" data-i18n="mobileLabel">Cellulare</span>
+                <a class="contact-phone-num" href="tel:+393336689364">+39 333 668 9364</a>
+              </div>
+              <div class="contact-phone-row">
+                <span class="contact-phone-label" data-i18n="officeLabel">Fisso</span>
+                <a class="contact-phone-num" href="tel:+390973823286">+39 0973 823286</a>
+              </div>
             </div>
           </section>
 
-          <section class="editorial-grid-contact">
-            <article class="card lined-card contact-box">
-              <span class="mini-label" data-i18n="phoneLabel">Telefono</span>
-              <h3 data-i18n="contactsBoxTitle">Contatti</h3>
-              <ul>
-                <li><a href="tel:+393336689364">+39 333 668 9364</a></li>
-                <li><span class="contact-type" data-i18n="officeLabel">Fisso</span> · <a href="tel:+390973823286">+39 0973 823286</a></li>
-                <li><a href="https://wa.me/393336689364" target="_blank" rel="noreferrer">WhatsApp</a></li>
-                <li><a href="mailto:giov.cosentino@alice.it">giov.cosentino@alice.it</a></li>
-              </ul>
-            </article>
+          <section class="editorial-grid-contact section-spacer">
             <article class="card lined-card contact-box">
               <span class="mini-label" data-i18n="addressLabel">Indirizzo</span>
               <h3 data-i18n="addressTitle">Lauria</h3>
@@ -103,12 +95,15 @@
               <h3 data-i18n="hoursTitle">Apertura</h3>
               <p data-i18n="hoursText">Lun–Sab · 08:30–12:30 / 14:30–18:30</p>
             </article>
+            <article class="card lined-card contact-box">
+              <span class="mini-label">Email</span>
+              <h3>Email</h3>
+              <a href="mailto:giov.cosentino@alice.it">giov.cosentino@alice.it</a>
+            </article>
           </section>
-
-          <p class="footer-note" data-i18n="footerNote">Email e orari possono essere aggiornati facilmente quando avremo i dati definitivi.</p>
         </main>
       </div>
     </div>
-    <script src="./lang.js?v=0.4.0"></script>
+    <script src="./lang.js?v=0.4.3"></script>
   </body>
 </html>
