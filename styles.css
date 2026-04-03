@@ -794,6 +794,109 @@ button { font: inherit; }
   }
 }
 
+/* ── Product accordion ──────────────────────────────────── */
+
+.cat-accordion { display: grid; gap: 10px; }
+
+.cat-item { overflow: hidden; }
+
+.cat-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 22px 24px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.cat-toggle:hover .cat-arrow {
+  border-color: rgba(47, 75, 57, 0.3);
+  color: var(--forest);
+}
+
+.cat-toggle-inner { flex: 1; min-width: 0; }
+
+.cat-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.cat-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.cat-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(35, 31, 24, 0.1);
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  transition: transform 220ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.cat-toggle[aria-expanded="true"] .cat-arrow { transform: rotate(180deg); }
+
+.cat-panel { padding: 0 24px 24px; }
+.cat-panel[hidden] { display: none; }
+
+.cat-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+  padding-top: 4px;
+}
+
+.cat-photo-card {
+  margin: 0;
+  background: rgba(255, 251, 244, 0.55);
+  border: 1px solid rgba(35, 31, 24, 0.07);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: box-shadow 160ms ease;
+}
+
+.cat-photo-card:hover { box-shadow: 0 12px 32px rgba(35, 31, 24, 0.09); }
+
+.cat-photo-card img {
+  filter: none;
+  border-radius: 8px;
+  object-fit: contain;
+  height: 150px;
+  width: 100%;
+}
+
+.cat-photo-card figcaption {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@media (max-width: 680px) {
+  .cat-toggle { padding: 18px; }
+  .cat-panel { padding: 0 18px 18px; }
+  .cat-photo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Version badge ──────────────────────────────────────── */
+
 .site-version {
   position: fixed;
   right: 10px;

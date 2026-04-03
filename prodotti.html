@@ -24,12 +24,11 @@
           </div>
           <nav class="desktop-nav" aria-label="Primary">
             <a class="nav-link" href="./index.html" data-i18n="navHome">Home</a>
-            <a class="nav-link is-active" href="./prodotti.html" data-i18n="navProducts" data-i18n="productsEyebrow">Prodotti</a>
+            <a class="nav-link is-active" href="./prodotti.html" data-i18n="navProducts">Prodotti</a>
             <a class="nav-link" href="./officina.html" data-i18n="navWorkshop">Officina</a>
             <a class="nav-link" href="./marchi.html" data-i18n="navBrands">Marchi</a>
             <a class="nav-link" href="./contatti.html" data-i18n="navContacts">Contatti</a>
           </nav>
-
           <div class="topbar-actions">
             <div class="lang-switch" aria-label="Language switcher">
               <button class="lang-btn is-active" data-lang="it">IT</button>
@@ -42,10 +41,11 @@
             </button>
           </div>
         </header>
+
         <div class="mobile-menu" id="mobile-menu" hidden>
           <nav class="mobile-menu-panel" aria-label="Mobile navigation">
             <a class="nav-link" href="./index.html" data-i18n="navHome">Home</a>
-            <a class="nav-link is-active" href="./prodotti.html" data-i18n="navProducts" data-i18n="productsEyebrow">Prodotti</a>
+            <a class="nav-link is-active" href="./prodotti.html" data-i18n="navProducts">Prodotti</a>
             <a class="nav-link" href="./officina.html" data-i18n="navWorkshop">Officina</a>
             <a class="nav-link" href="./marchi.html" data-i18n="navBrands">Marchi</a>
             <a class="nav-link" href="./contatti.html" data-i18n="navContacts">Contatti</a>
@@ -79,35 +79,242 @@
             </div>
           </section>
 
-          <section class="editorial-grid-products">
-            <article class="catalog-card card lined-card compact-catalog-card">
-              <h3 data-i18n="cat1">Motoseghe</h3>
-              <p data-i18n="cat1Text">Taglio, potatura e lavori nel bosco.</p>
-            </article>
-            <article class="catalog-card card lined-card compact-catalog-card">
-              <h3 data-i18n="cat2">Rasaerba</h3>
-              <p data-i18n="cat2Text">Prato e manutenzione del verde.</p>
-            </article>
-            <article class="catalog-card card lined-card compact-catalog-card">
-              <h3 data-i18n="cat3">Decespugliatori</h3>
-              <p data-i18n="cat3Text">Per giardino, campagna e rifinitura.</p>
-            </article>
-            <article class="catalog-card card lined-card compact-catalog-card">
-              <h3 data-i18n="cat4">Motozappe</h3>
-              <p data-i18n="cat4Text">Terreno, orto e piccoli lavori agricoli.</p>
-            </article>
-            <article class="catalog-card card lined-card compact-catalog-card">
-              <h3 data-i18n="cat5">Ricambi</h3>
-              <p data-i18n="cat5Text">Catene, lame, oli, fili, filtri e consumabili.</p>
-            </article>
-            <article class="catalog-card card lined-card compact-catalog-card">
-              <h3 data-i18n="cat6">Accessori stagionali</h3>
-              <p data-i18n="cat6Text">Scuotitori e attrezzature legate ai periodi di lavoro.</p>
-            </article>
+          <section class="cat-accordion section-spacer" aria-label="Categorie prodotti">
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-chainsaw">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat1">Motoseghe</h3>
+                  <p class="cat-desc" data-i18n="cat1Text">Taglio, potatura e lavori nel bosco.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-chainsaw" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/chainsaw-1.jpeg" alt="Motosega Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_chainsaw1">Motosega a benzina</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-lawnmower">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat2">Rasaerba</h3>
+                  <p class="cat-desc" data-i18n="cat2Text">Prato e manutenzione del verde.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-lawnmower" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/lawnmower-walk.jpeg" alt="Rasaerba a spinta Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_lawnmower_walk">Rasaerba a spinta</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/lawnmower-tractor.jpeg" alt="Trattorino rasaerba Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_lawnmower_tractor">Trattorino rasaerba</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/lawnmower-rotary-large.jpeg" alt="Motofalciatrice Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_lawnmower_large">Motofalciatrice a ruote</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-brushcutter">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat3">Decespugliatori</h3>
+                  <p class="cat-desc" data-i18n="cat3Text">Per giardino, campagna e rifinitura.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-brushcutter" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/brushcutter-petrol.jpeg" alt="Decespugliatore a benzina Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_brushcutter_petrol">Decespugliatore a benzina</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/brushcutter-battery.jpeg" alt="Decespugliatore a batteria Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_brushcutter_battery">Decespugliatore a batteria</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-hedgetrimmer">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat7">Tagliasiepi</h3>
+                  <p class="cat-desc" data-i18n="cat7Text">Potatura di siepi e arbusti.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-hedgetrimmer" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/hedgetrimmer-petrol.jpeg" alt="Tagliasiepi a benzina Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_hedgetrimmer_petrol">Tagliasiepi a benzina</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/hedgetrimmer-electric.jpeg" alt="Tagliasiepi elettrica Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_hedgetrimmer_electric">Tagliasiepi elettrica</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-tiller">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat4">Motozappe</h3>
+                  <p class="cat-desc" data-i18n="cat4Text">Terreno, orto e piccoli lavori agricoli.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-tiller" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/tiller-walk.jpeg" alt="Motozappa a ruote Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_tiller_walk">Motozappa a ruote</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/tiller-rotary.jpeg" alt="Motozappa con frese Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_tiller_rotary">Motozappa con frese</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-blower">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat8">Soffiatori</h3>
+                  <p class="cat-desc" data-i18n="cat8Text">Pulizia di foglie, detriti e superfici.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-blower" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/blower-handheld.jpeg" alt="Soffiatore a mano Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_blower_handheld">Soffiatore a mano</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/blower-backpack.jpeg" alt="Soffiatore a zaino" loading="lazy" />
+                    <figcaption data-i18n="prod_blower_backpack">Soffiatore a zaino</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-pruner">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat9">Potatori telescopici</h3>
+                  <p class="cat-desc" data-i18n="cat9Text">Potatura di rami in quota, senza scale.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-pruner" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/pole-pruner.jpeg" alt="Potatrice telescopica Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_pole_pruner">Potatrice telescopica</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-multitool">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat10">Multifunzione</h3>
+                  <p class="cat-desc" data-i18n="cat10Text">Un unico motore, più accessori intercambiabili.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-multitool" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/multitool-battery-head.jpeg" alt="Unità multifunzione a batteria Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_multitool_battery">Unità multifunzione a batteria</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/multitool-petrol-system.jpeg" alt="Sistema multifunzione a benzina Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_multitool_petrol">Sistema multifunzione a benzina</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-harvester">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat6">Scuotitori e abbacchiatori</h3>
+                  <p class="cat-desc" data-i18n="cat6Text">Raccolta di olive e frutta, attrezzatura stagionale.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-harvester" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/harvester-rake.jpeg" alt="Abbacchiatore elettrico" loading="lazy" />
+                    <figcaption data-i18n="prod_harvester">Abbacchiatore / scuotitore elettrico</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-item card lined-card">
+              <button class="cat-toggle" aria-expanded="false" aria-controls="cat-accessories">
+                <div class="cat-toggle-inner">
+                  <h3 class="cat-name" data-i18n="cat5">Ricambi e accessori</h3>
+                  <p class="cat-desc" data-i18n="cat5Text">Catene, lame, oli, fili, filtri e consumabili.</p>
+                </div>
+                <span class="cat-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="cat-panel" id="cat-accessories" hidden>
+                <div class="cat-photo-grid">
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/oil-2stroke.jpeg" alt="Olio motore 2 tempi Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_oil">Olio motore 2 tempi</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/trimmer-line.jpeg" alt="Filo per decespugliatori Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_trimmerline">Filo per decespugliatori</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/pressure-washer.jpeg" alt="Idropulitrice Oleo-Mac" loading="lazy" />
+                    <figcaption data-i18n="prod_pressurewasher">Idropulitrice elettrica</figcaption>
+                  </figure>
+                  <figure class="cat-photo-card">
+                    <img src="./assets/medias/power-station.jpeg" alt="Stazione di energia Oleo-Mac PSi 1650" loading="lazy" />
+                    <figcaption data-i18n="prod_powerstation">Stazione di energia portatile</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
           </section>
         </main>
       </div>
     </div>
-    <script src="./lang.js?v=0.3.0"></script>
+    <script src="./lang.js?v=0.4.0"></script>
+    <script>
+      document.querySelectorAll('.cat-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var panel = document.getElementById(btn.getAttribute('aria-controls'));
+          var isOpen = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          panel.hidden = isOpen;
+        });
+      });
+    </script>
   </body>
 </html>
