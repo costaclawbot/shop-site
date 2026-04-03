@@ -687,7 +687,14 @@ button { font: inherit; }
   color: var(--ink-soft);
 }
 
-.contact-card { padding: 36px 40px; }
+.contact-card {
+  padding: 44px 48px;
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-top: 2px solid rgba(156, 123, 75, 0.45);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
 
 .contact-card-body {
   display: grid;
@@ -764,7 +771,7 @@ button { font: inherit; }
 .contact-email:hover { color: var(--forest); }
 
 @media (max-width: 760px) {
-  .contact-card { padding: 24px; }
+  .contact-card { padding: 32px 28px; }
   .contact-card-body {
     grid-template-columns: 1fr;
     gap: 28px 0;
