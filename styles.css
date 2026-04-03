@@ -164,81 +164,93 @@ button { font: inherit; }
   gap: 10px;
 }
 
-.hero-highlights {
-  list-style: none;
-  padding: 0;
-  margin: 18px 0 0;
-  display: grid;
-  gap: 10px;
-}
-
-.hero-highlights li {
-  position: relative;
-  padding: 12px 14px 12px 42px;
-  border: 1px solid rgba(35, 31, 24, 0.08);
-  background: rgba(255, 251, 244, 0.7);
-  border-radius: 16px;
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.hero-highlights li::before {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  margin-top: -6px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--brass), var(--forest));
-}
-
 .hero-actions {
   margin-top: 18px;
   flex-wrap: wrap;
 }
 
-.hero-priority {
-  padding-bottom: 18px;
+.hero-simple {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  padding-bottom: 8px;
 }
 
-.priorities-grid-emphasis .priority-card,
-.story-featured,
-.tone-story-card,
-.contact-shortcut-card {
-  min-height: 100%;
+.hero-visual-clean {
+  max-width: 520px;
+  margin-left: auto;
 }
 
-.story-featured {
-  background: linear-gradient(135deg, rgba(255, 251, 244, 0.92), rgba(244, 236, 222, 0.82));
+.services-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.tone-story-card {
+.service-pill {
+  display: block;
+  padding: 20px;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.service-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 60px rgba(35, 31, 24, 0.09);
+  border-color: rgba(47, 75, 57, 0.18);
+}
+
+.service-pill h3 {
+  font-size: 1.14rem;
+  margin-bottom: 8px;
+}
+
+.service-pill p {
+  margin: 0;
+}
+
+.story-band,
+.contact-band {
+  display: grid;
+  gap: 22px;
+  padding: 24px;
+}
+
+.story-band {
+  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.75fr);
+  align-items: center;
+}
+
+.story-band-copy h3,
+.contact-band h3 {
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.story-band-copy p,
+.contact-band p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.62;
+}
+
+.story-band-aside {
+  padding-left: 8px;
+  border-left: 1px solid rgba(35, 31, 24, 0.08);
+}
+
+.story-band-aside .quote {
+  font-size: clamp(1.9rem, 2.8vw, 2.7rem);
+}
+
+.contact-band {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.contact-band-actions {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.tone-story-card .quote {
-  margin-bottom: 10px;
-}
-
-.contact-shortcut-card {
-  justify-content: space-between;
-}
-
-.story-grid-home {
-  align-items: stretch;
-}
-
-.story-grid-home .story-wide {
-  min-height: 100%;
-}
-
-.story-grid-home .story-card p + .quote,
-.story-grid-home .quote + p {
-  margin-top: 12px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .inline-link {
@@ -249,96 +261,6 @@ button { font: inherit; }
 
 .inline-link::after {
   content: "→";
-}
-
-.priority-oleomac {
-  background: linear-gradient(135deg, rgba(36,57,44,0.98), rgba(47,75,57,0.95));
-  color: #f8f2e8;
-}
-
-.priority-oleomac p,
-.priority-oleomac .mini-label {
-  color: rgba(248, 242, 232, 0.8);
-}
-
-.priority-card h3,
-.contact-shortcut-card h3 {
-  font-size: 1.24rem;
-}
-
-.contact-shortcut-card p {
-  margin-bottom: 18px;
-}
-
-.tone-story-card p:last-child,
-.story-featured p:last-child {
-  margin-bottom: 0;
-}
-
-.tone-story-card .mini-label,
-.priority-oleomac .mini-label {
-  letter-spacing: 0.16em;
-}
-
-.story-featured h3 {
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
-}
-
-.tone-story-card .quote {
-  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
-}
-
-.contact-shortcut-card .inline-link {
-  margin-top: auto;
-}
-
-.priority-card,
-.contact-shortcut-card,
-.story-featured,
-.tone-story-card {
-  box-shadow: 0 24px 60px rgba(35, 31, 24, 0.09);
-}
-
-.priority-card,
-.contact-shortcut-card {
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
-
-.story-featured,
-.tone-story-card {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-.story-featured p,
-.tone-story-card p {
-  max-width: 58ch;
-}
-
-.contact-shortcut-card p,
-.priority-card p {
-  max-width: 34ch;
-}
-
-.story-featured::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 80px;
-  background: linear-gradient(180deg, transparent, rgba(156, 123, 75, 0.08));
-  pointer-events: none;
-}
-
-.story-featured > * {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 680px) {
-  .hero-highlights li {
-    padding: 11px 12px 11px 38px;
-  }
 }
 
 .desktop-nav,
@@ -595,7 +517,9 @@ button { font: inherit; }
   .hero-editorial,
   .editorial-split,
   .story-grid,
-  .area-grid {
+  .area-grid,
+  .story-band,
+  .contact-band {
     grid-template-columns: 1fr;
   }
 
@@ -604,6 +528,7 @@ button { font: inherit; }
     max-width: none;
   }
 
+  .services-strip,
   .editorial-grid,
   .editorial-grid-products,
   .editorial-grid-contact,
@@ -615,6 +540,15 @@ button { font: inherit; }
 
   .editorial-grid-brand .featured-brand {
     grid-column: span 2;
+  }
+
+  .contact-band-actions {
+    justify-content: flex-start;
+  }
+
+  .story-band-aside {
+    border-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -644,6 +578,7 @@ button { font: inherit; }
     font-size: 2.7rem;
   }
 
+  .services-strip,
   .editorial-grid,
   .editorial-grid-products,
   .editorial-grid-contact,
@@ -664,7 +599,10 @@ button { font: inherit; }
   .service-box,
   .story-card,
   .detail-card,
-  .area-card {
+  .area-card,
+  .service-pill,
+  .story-band,
+  .contact-band {
     padding: 18px;
   }
 }
