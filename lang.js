@@ -64,6 +64,7 @@ function applyTranslations(lang) {
   });
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('is-active', btn.dataset.lang === lang);
+    btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
   });
   document.querySelectorAll('.email-btn').forEach((btn) => {
     btn.href = lang === 'en' ? btn.dataset.mailtoEn : btn.dataset.mailtoIt;
@@ -76,5 +77,25 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.addEventListener('click', () => applyTranslations(btn.dataset.lang));
   });
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('is-open');
+      mobileMenu.hidden = !isOpen;
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    mobileMenu.querySelectorAll('a, button').forEach((el) => {
+      el.addEventListener('click', () => {
+        if (el.classList.contains('lang-btn')) return;
+        mobileMenu.classList.remove('is-open');
+        mobileMenu.hidden = true;
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   applyTranslations(localStorage.getItem('shop-language') || 'it');
 });
