@@ -148,6 +148,7 @@ button { font: inherit; }
 .topbar-actions,
 .lang-switch,
 .hero-actions,
+.hero-highlights,
 .check-list,
 .contact-box ul,
 .editorial-grid,
@@ -161,6 +162,183 @@ button { font: inherit; }
 .quick-links {
   display: flex;
   gap: 10px;
+}
+
+.hero-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.hero-highlights li {
+  position: relative;
+  padding: 12px 14px 12px 42px;
+  border: 1px solid rgba(35, 31, 24, 0.08);
+  background: rgba(255, 251, 244, 0.7);
+  border-radius: 16px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hero-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brass), var(--forest));
+}
+
+.hero-actions {
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.hero-priority {
+  padding-bottom: 18px;
+}
+
+.priorities-grid-emphasis .priority-card,
+.story-featured,
+.tone-story-card,
+.contact-shortcut-card {
+  min-height: 100%;
+}
+
+.story-featured {
+  background: linear-gradient(135deg, rgba(255, 251, 244, 0.92), rgba(244, 236, 222, 0.82));
+}
+
+.tone-story-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tone-story-card .quote {
+  margin-bottom: 10px;
+}
+
+.contact-shortcut-card {
+  justify-content: space-between;
+}
+
+.story-grid-home {
+  align-items: stretch;
+}
+
+.story-grid-home .story-wide {
+  min-height: 100%;
+}
+
+.story-grid-home .story-card p + .quote,
+.story-grid-home .quote + p {
+  margin-top: 12px;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.inline-link::after {
+  content: "→";
+}
+
+.priority-oleomac {
+  background: linear-gradient(135deg, rgba(36,57,44,0.98), rgba(47,75,57,0.95));
+  color: #f8f2e8;
+}
+
+.priority-oleomac p,
+.priority-oleomac .mini-label {
+  color: rgba(248, 242, 232, 0.8);
+}
+
+.priority-card h3,
+.contact-shortcut-card h3 {
+  font-size: 1.24rem;
+}
+
+.contact-shortcut-card p {
+  margin-bottom: 18px;
+}
+
+.tone-story-card p:last-child,
+.story-featured p:last-child {
+  margin-bottom: 0;
+}
+
+.tone-story-card .mini-label,
+.priority-oleomac .mini-label {
+  letter-spacing: 0.16em;
+}
+
+.story-featured h3 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.tone-story-card .quote {
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+}
+
+.contact-shortcut-card .inline-link {
+  margin-top: auto;
+}
+
+.priority-card,
+.contact-shortcut-card,
+.story-featured,
+.tone-story-card {
+  box-shadow: 0 24px 60px rgba(35, 31, 24, 0.09);
+}
+
+.priority-card,
+.contact-shortcut-card {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.story-featured,
+.tone-story-card {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.story-featured p,
+.tone-story-card p {
+  max-width: 58ch;
+}
+
+.contact-shortcut-card p,
+.priority-card p {
+  max-width: 34ch;
+}
+
+.story-featured::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 80px;
+  background: linear-gradient(180deg, transparent, rgba(156, 123, 75, 0.08));
+  pointer-events: none;
+}
+
+.story-featured > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 680px) {
+  .hero-highlights li {
+    padding: 11px 12px 11px 38px;
+  }
 }
 
 .desktop-nav,
