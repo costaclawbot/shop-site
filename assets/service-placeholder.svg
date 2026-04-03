@@ -1,0 +1,12 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#EEF3EC"/>
+  <rect x="85" y="100" width="1030" height="700" rx="34" fill="#FAFCF9" stroke="#C6D2C6" stroke-width="4"/>
+  <text x="600" y="210" text-anchor="middle" fill="#214D35" font-family="Arial, sans-serif" font-size="48" font-weight="700">FOTO OFFICINA / ASSISTENZA</text>
+  <text x="600" y="270" text-anchor="middle" fill="#4D6656" font-family="Arial, sans-serif" font-size="28">Placeholder per banco lavoro, macchinari o riparazioni</text>
+  <rect x="180" y="340" width="210" height="260" rx="22" fill="#DCE7DD"/>
+  <rect x="430" y="380" width="340" height="220" rx="22" fill="#C7D9C9"/>
+  <rect x="810" y="300" width="210" height="300" rx="22" fill="#DCE7DD"/>
+  <circle cx="300" cy="670" r="60" fill="#D8B56A"/>
+  <circle cx="900" cy="670" r="60" fill="#D8B56A"/>
+  <rect x="450" y="650" width="300" height="44" rx="22" fill="#214D35"/>
+</svg>
