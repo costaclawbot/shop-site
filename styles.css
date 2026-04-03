@@ -679,6 +679,14 @@ button { font: inherit; }
 
 .inline-link { color: var(--forest); font-weight: 600; }
 .section-spacer { margin-top: 34px; }
+.contact-type {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 .footer-note {
   margin-top: 26px;
   color: var(--ink-soft);
@@ -796,7 +804,7 @@ button { font: inherit; }
 
 /* ── Product accordion ──────────────────────────────────── */
 
-.cat-accordion { display: grid; gap: 10px; }
+.cat-accordion { display: grid; gap: 10px; margin-top: 44px; }
 
 .cat-item { overflow: hidden; }
 
