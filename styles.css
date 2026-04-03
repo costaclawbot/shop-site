@@ -387,6 +387,14 @@ button { font: inherit; }
 
 .contact-box ul,
 .area-card ul { display: grid; gap: 8px; }
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .inline-link { color: var(--forest); font-weight: 600; }
 .section-spacer { margin-top: 34px; }
 .footer-note {

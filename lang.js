@@ -11,6 +11,8 @@ const translations = {
     homeText: 'Giardinaggio e agricoltura, da due generazioni.',
     call: 'Chiama',
     whatsapp: 'WhatsApp',
+    emailAction: 'Email us',
+    emailAction: 'Scrivi un’email',
     heroNote: 'Foto futura: facciata, insegna o banco officina.',
     productsLabel: 'Prodotti',
     productsCardTitle: 'Attrezzature selezionate',
@@ -99,6 +101,7 @@ const translations = {
     homeText: 'Gardening and agriculture, across two generations.',
     call: 'Call',
     whatsapp: 'WhatsApp',
+    emailAction: 'Scrivi un’email',
     heroNote: 'Future photo: storefront, sign or workshop bench.',
     productsLabel: 'Products',
     productsCardTitle: 'Selected equipment',
@@ -188,6 +191,9 @@ function applyTranslations(lang) {
     btn.classList.toggle('is-active', btn.dataset.lang === lang);
   });
   localStorage.setItem('shop-language', lang);
+  document.querySelectorAll('.email-btn').forEach((btn) => {
+    btn.setAttribute('href', lang === 'en' ? btn.dataset.mailtoEn : btn.dataset.mailtoIt);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
