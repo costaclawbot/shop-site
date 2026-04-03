@@ -246,11 +246,65 @@ button { font: inherit; }
   align-items: center;
 }
 
+.product-intro,
+.workshop-band,
+.contact-band-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding: 22px;
+}
+
+.product-intro h3,
+.workshop-band h3,
+.contact-band-page h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.product-intro p,
+.workshop-band p,
+.contact-band-page p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.product-intro-actions,
+.workshop-band-actions,
 .contact-band-actions {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.compact-catalog-card {
+  min-height: 0;
+}
+
+.compact-catalog-card h3 {
+  margin-bottom: 8px;
+}
+
+.compact-catalog-card p {
+  margin: 0;
+}
+
+.brand-spotlight {
+  background: linear-gradient(135deg, rgba(36,57,44,0.98), rgba(47,75,57,0.95));
+  color: #f8f2e8;
+}
+
+.brand-spotlight p,
+.brand-spotlight .mini-label {
+  color: rgba(248, 242, 232, 0.82);
+}
+
+.simple-note-band {
+  grid-template-columns: 1fr;
 }
 
 .inline-link {
@@ -519,7 +573,10 @@ button { font: inherit; }
   .story-grid,
   .area-grid,
   .story-band,
-  .contact-band {
+  .contact-band,
+  .product-intro,
+  .workshop-band,
+  .contact-band-page {
     grid-template-columns: 1fr;
   }
 
@@ -542,6 +599,8 @@ button { font: inherit; }
     grid-column: span 2;
   }
 
+  .product-intro-actions,
+  .workshop-band-actions,
   .contact-band-actions {
     justify-content: flex-start;
   }
